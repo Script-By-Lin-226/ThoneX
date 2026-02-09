@@ -1,0 +1,88 @@
+﻿.app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2.5rem 1.5rem 3.5rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  letter-spacing: -0.02em;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  color: var(--muted);
+  margin: 0;
+}
+
+.nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.nav button {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  padding: 0.65rem 1rem;
+  border-radius: 999px;
+  color: var(--text);
+  box-shadow: var(--shadow);
+}
+
+.activeTab {
+  border-color: transparent;
+  background: var(--accent);
+  color: #fff;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 0.75rem 1rem;
+  box-shadow: var(--shadow);
+  margin-bottom: 1.5rem;
+}
+
+.bannerwarning {
+  border-color: var(--warning);
+}
+
+.bannerinfo {
+  border-color: var(--accent);
+}
+
+.banner button {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .header {
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+}

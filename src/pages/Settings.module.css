@@ -1,0 +1,91 @@
+﻿.settings {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.card,
+.cardDanger {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.cardDanger {
+  border-color: rgba(220, 38, 38, 0.4);
+}
+
+.categoryList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.categoryRow {
+  display: grid;
+  grid-template-columns: 2fr 0.6fr 1fr auto;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+.addCategory {
+  display: grid;
+  grid-template-columns: 2fr 0.6fr 1fr auto;
+  gap: 0.6rem;
+  margin-top: 1rem;
+}
+
+.settingsGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.importExport {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.importLabel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.6rem 1rem;
+  border-radius: 12px;
+  border: 1px dashed var(--border);
+  cursor: pointer;
+}
+
+.importLabel input {
+  display: none;
+}
+
+.primaryButton {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 12px;
+}
+
+.dangerButton {
+  background: rgba(220, 38, 38, 0.1);
+  border: 1px solid rgba(220, 38, 38, 0.4);
+  color: var(--danger);
+  padding: 0.6rem 1.1rem;
+  border-radius: 12px;
+}
+
+@media (max-width: 720px) {
+  .categoryRow,
+  .addCategory {
+    grid-template-columns: 1fr 0.6fr 1fr;
+  }
+  .categoryRow button,
+  .addCategory button {
+    grid-column: 1 / -1;
+  }
+}

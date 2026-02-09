@@ -1,0 +1,88 @@
+﻿.budgets {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.headerCard,
+.editorCard,
+.progressCard {
+  background: var(--panel);
+  border-radius: 16px;
+  padding: 1.2rem 1.5rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.headerCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.editorGrid {
+  display: grid;
+  gap: 0.75rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.editorRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: var(--panel-muted);
+  padding: 0.6rem 0.8rem;
+  border-radius: 12px;
+}
+
+.editorRow input {
+  max-width: 120px;
+}
+
+.helper {
+  color: var(--muted);
+}
+
+.progressList {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.progressItem {
+  background: var(--panel-muted);
+  border-radius: 12px;
+  padding: 0.8rem 1rem;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.progressBar {
+  height: 8px;
+  background: rgba(148, 163, 184, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progressBar span {
+  display: block;
+  height: 100%;
+  background: var(--accent);
+}
+
+.over .progressBar span {
+  background: var(--danger);
+}
+
+.alert {
+  color: var(--danger);
+  font-weight: 600;
+}
+
+@media (max-width: 720px) {
+  .headerCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

@@ -1,0 +1,79 @@
+﻿@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  font-family: "Space Grotesk", "Segoe UI", "Trebuchet MS", "Verdana", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --bg: #f5f3ef;
+  --bg-accent: #f0e9e1;
+  --panel: #ffffff;
+  --panel-muted: #f8fafc;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --accent: #2563eb;
+  --accent-soft: #dbeafe;
+  --danger: #dc2626;
+  --warning: #f59e0b;
+  --success: #16a34a;
+  --border: #e5e7eb;
+  --shadow: 0 12px 30px rgba(15, 23, 42, 0.08);
+}
+
+body[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #0f172a;
+  --bg-accent: #111827;
+  --panel: #1f2937;
+  --panel-muted: #111827;
+  --text: #f9fafb;
+  --muted: #94a3b8;
+  --accent: #38bdf8;
+  --accent-soft: #0f172a;
+  --danger: #f87171;
+  --warning: #fbbf24;
+  --success: #4ade80;
+  --border: #334155;
+  --shadow: 0 16px 40px rgba(2, 6, 23, 0.4);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: radial-gradient(circle at top left, var(--bg-accent), var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+input,
+select {
+  padding: 0.55rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--text);
+}
+
+input:focus,
+select:focus,
+button:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+button {
+  cursor: pointer;
+}
